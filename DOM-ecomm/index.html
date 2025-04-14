@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital;wght@400,500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/functions.js" defer></script>
+    <title>JS-DOM</title>
+</head>
+<body>
+    <header class="header">
+        <i class="menu-icon">
+            <img src="img/menu.svg" class="logo" alt="Icono Menu">
+        </i>
+        <section class="menu">
+            <div class="menu__header">
+                <button class="menu__close-button">X</button>
+            </div>
+            <div class="menu__item">
+                <a href="#">Inicio</a>
+            </div>
+            <div class="menu__item">
+                <a href="#">Productos</a>
+            </div>
+            <div class="menu__item">
+                <a href="#">Contacto</a>
+            </div>
+            <div class="menu__item">
+                <a href="#">Acerca de</a>
+            </div>
+        </section>
+        <div class="cart-container">
+            <i>
+                <img src="img/shopping-cart.svg" class="header__cart" alt="Icono Carrito">
+            </i>
+            <span class="cart-badge">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="products logo">
+            <article class="products__items">
+                <img src="img/2022-Honda-Civic-Sedan-Touring_o-1038x375.jpg" class="products__img" alt="red_honda">
+                <h3 class="products__title">2023 Red Semi-new Sedan Civic</h3>
+                <p class="products__price">$16,999.00</p>
+                <button class="products__purchase">Purchase</button>
+                <button class="add_cart">Add to cart</button>
+            </article>
+            <article class="products__items">
+                <img src="img/CRV.png" class="products__img" alt="Honda CRV">
+                <h3 class="products__title">2024 Semi-new Honda CRV</h3>
+                <p class="products__price">$25,499.00</p>
+                <button class="products__purchase">Purchase</button>
+                <button class="add_cart">Add to cart</button>
+            </article>
+            <article class="products__items">
+                <img src="img/hondacivic.png" class="products__img" alt="Tenis Adidas">
+                <h3 class="products__title">2026 Honda Type R</h3>
+                <p class="products__price">Starting from $45,890.00</p>
+                <button class="products__purchase">Purchase</button>
+                <button class="add_cart">Add to cart</button>
+            </article>
+            <article class="products__items">
+                <img src="img/integra.jpeg" class="products__img" alt="integra">
+                <h3 class="products__title">2025 Acura Integra</h3>
+                <p class="products__price">Starting from $33,000.00</p>
+                <button class="products__purchase">Purchase</button>
+                <button class="add_cart">Add to cart</button>
+            </article>
+            <article class="products__items">
+                <img src="img/minicrv.jpeg" class="products__img" alt="honda_pilot">
+                <h3 class="products__title">2026 Honda Pilot</h3>
+                <p class="products__price">Starting from $38,000.00</p>
+                <button class="products__purchase">Purchase</button>
+                <button class="add_cart">Add to cart</button>
+            </article>
+            <article class="products__items">
+                <img src="img/MDX.jpeg" class="products__img" alt="Tenis Adidas">
+                <h3 class="products__title">2025 Acura MDX</h3>
+                <p class="products__price">Starting from $51,200.00</p>
+                <button class="products__purchase">Purchase</button>
+                <button class="add_cart">Add to cart</button>
+            </article>
+            <article class="products__items">
+                <img src="img/HondaCBR.jpeg" class="products__img" alt="honda_CRB">
+                <h3 class="products__title">2025 Honda CBR Motorcycle</h3>
+                <p class="products__price">Starting from $12,199.00</p>
+                <button class="products__purchase products__purchase--btn">Purchase</button>
+                <button class="add_cart">Add to cart</button>
+            </article>
+            <article class="products__items unavailable">
+                <img src="img/NSX2025.jpeg" class="products__img" alt="Street Legal Modded NSX">
+                <div class="unavailable-overlay">Unavailable</div>
+                <h3 class="products__title">2022 Street Legal Modded NSX</h3>
+                <p class="products__price">Starting from $169,500.00</p>
+                <button class="products__purchase products__purchase--btn">Purchase</button>
+                <button class="add_cart">Add to cart</button>
+                <p class="unavailable-message">No disponible</p>
+            </article>
+            <article class="products__items unavailable">
+                <img src="img/civicsedan.webp" class="products__img" alt="Chamarra Adidas">
+                <h3 id="txt" class="products__title">2014 Semi-New Sport Civic Sedan</h3>
+                <p class="products__price">Starting from $12,499.00</p>
+                <button class="products__purchase products__purchase--btn">Purchase</button>
+                <button class="add_cart">Add to cart</button>
+                <p class="unavailable-message">No disponible</p>
+            </article>
+            <article class="products__items unavailable">
+                <img src="img/6f972881ea399a86abfcfd4f1854c749.jpg" class="products__img" alt="honda_racing_bike">
+                <h3 class="products__title">Honda CBR1000RR</h3>
+                <p class="products__price">Starting from $16,999.00</p>
+                <button class="products__purchase products__purchase--btn">Purchase</button>
+                <button class="add_cart">Add to cart</button>
+                <p class="unavailable-message">No disponible</p>
+            </article>
+        </section>
+
+        <section class="cart">
+            <i class="cart__close-button"><img src="img/x-square.svg" alt="Close Cart"></i> <!-- Close button moved -->
+            <h2 class="cart__main">CARRITO</h2>
+            <div>
+                <button class="buy_cart">BUY</button>
+            </div>
+        </section>
+        <footer>
+            <div class="footer__container">
+                <div class="footer__logo">
+                    <img src="img/Honda.png" alt="Honda Logo">
+                    <h1>HONDA</h1>
+                </div>
+                <div class="footer__content">
+                    <div class="footer__social">
+                        <p>Stay In Touch</p>
+                        <div>
+                            <a href="#"><img src="img/twitter.svg" alt="Twitter"></a>
+                            <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                            <a href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                            <a href="#"><img src="img/linkedin.svg" alt="LinkedIn"></a>
+                            <a href="#"><img src="img/youtube.svg" alt="YouTube"></a>
+                            <a href="#"><img src="img/mail.svg" alt="Email"></a>
+                        </div>
+                    </div>
+                    <div class="footer__newsletter">
+                        <p>Receive the latest news and exclusive updates.</p>
+                        <button class="footer__subscribe">STAY INFORMED</button>
+                    </div>
+                    <div class="footer__search">
+                        <input type="text" placeholder="🔍 Search for anything Honda">
+                    </div>
+                </div>
+                <div class="footer__privacy">
+                    <p>
+                        By using this website, you agree to our 
+                        <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
